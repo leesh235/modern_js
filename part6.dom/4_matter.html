@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .pic-box1 {
+                border: 0 solid blue;
+            }
+            .pic-box1 > div > div > img {
+                border: 0 solid;
+                width: 99%;
+                height: 315px;
+            }
+            .pic-box1 img {
+                width: 100%; /*브라우저 사이즈에 따라 최대 이미지 크기가 같이 늘려지느냐 아니냐의 차이*/
+            }
+            .pic-box2 {
+                margin: 0 auto;
+                max-width: 50%;
+                border: 0 solid red;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            li {
+                float: left;
+                width: 24%;
+                margin-right: 1%;
+                cursor: pointer;
+                font-size: 0; /*의도하지 않은 여백을 없앨 수 있다.*/
+                border: 0 solid red;
+            }
+            #big_img {
+                padding-top: 6px;
+            }
+            .small_img {
+                width: auto;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pic-box1">
+            <div class="pic-box2">
+                <ul>
+                    <li>
+                        <img
+                            src="../image/ex1.jpg"
+                            class="small_img"
+                            data-image="../image/ex1.jpg"
+                        />
+                    </li>
+                    <li>
+                        <img
+                            src="../image/ex2.jpg"
+                            class="small_img"
+                            data-image="../image/ex2.jpg"
+                        />
+                    </li>
+                    <li>
+                        <img
+                            src="../image/ex3.jpg"
+                            class="small_img"
+                            data-image="../image/ex3.jpg"
+                        />
+                    </li>
+                    <li>
+                        <img
+                            src="../image/ex4.jpg"
+                            class="small_img"
+                            data-image="../image/ex4.jpg"
+                        />
+                    </li>
+                </ul>
+                <div>
+                    <img src="../image/ex1.jpg" id="big_img" />
+                </div>
+            </div>
+        </div>
+
+        <!-- head태그에 script를 넣을 경우 window.onload에 js code를 넣어야 작동한다. -->
+        <script src="./4_matter.js"></script>
+    </body>
+</html>
